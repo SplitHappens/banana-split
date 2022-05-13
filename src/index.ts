@@ -67,7 +67,7 @@ const worldParameters: GlobalConfig = {
 
 const common = `./src/features/**/*.feature \
                 --require-module ts-node/register \
-                --require ../node_modules/common-automation-framework/src/step-definitions/**/**/*.ts \
+                --require ./src/step-definitions/**/**/*.ts \
                 -f json:./reports/report.json \
                 --world-parameters ${JSON.stringify(worldParameters)} \
                 --format progress-bar \
