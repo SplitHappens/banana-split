@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm run compile",
-    "compile": "rimraf dist && babel --extensions .ts --out-dir dist src"
+    "compile": "shx rm -rf dist && babel --extensions .ts --out-dir dist src"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "eslint": "^8.14.0",
     "faker": "^5.5.3",
     "playwright": "^1.16.1",
+    "shx": "^0.3.4",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
