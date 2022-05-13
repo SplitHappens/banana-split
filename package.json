@@ -3,8 +3,7 @@
   "version": "1.0.1",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run compile",
-    "compile": "rimraf dist && babel --extensions .ts --out-dir dist src"
+    "build": "rimraf dist && babel --extensions .ts --out-dir dist src"
   },
   "author": "",
   "license": "ISC",
