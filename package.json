@@ -1,20 +1,18 @@
 {
-  "name": "e2e",
+  "name": "banana-split-happens",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .ts",
-    "precucumber": "rimraf reports && mkdir reports && echo {} > reports/report.json",
-    "transpile": "rimraf dist && babel --extensions .ts --out-dir dist src",
-    "cucumber": "yarn transpile && cucumber-js",
-    "postcucumber": "ts-node ./src/reporter/cucumber-report.ts"
+    "prepublishOnly": "npm run compile",
+    "compile": "rimraf dist && babel --extensions .ts --out-dir dist src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.7",
     "@cucumber/cucumber": "^8.0.0-rc.1",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
@@ -27,5 +25,14 @@
     "playwright": "^1.16.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SplitHappens/banana-split.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SplitHappens/banana-split/issues"
+  },
+  "homepage": "https://github.com/SplitHappens/banana-split#readme",
+  "description": ""
 }
