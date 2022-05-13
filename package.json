@@ -1,6 +1,6 @@
 {
   "name": "banana-split-happens",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && babel --extensions .ts --out-dir dist src"
